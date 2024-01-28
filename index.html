@@ -1,0 +1,359 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-black">
+    <!-- sidebar -->
+    <div class="sidebar d-flex position-fixed top-0 bottom-0 z-3">
+        <div id="sideBarLeft" class="bg-black w-80 position-relative">
+            <ul>
+                <a id="searchLink" href="#">
+                    <li>Search</li>
+                </a>
+                <a id="categoriesLink" href="#">
+                    <li>Categories</li>
+                </a>
+                <a id="areaLink" href="#">
+                    <li>Area</li>
+                </a>
+                <a id="ingredients" href="#">
+                    <li>Ingredients</li>
+                </a>
+                <a id="contactLink" href="#">
+                    <li>Contact Us</li>
+                </a>
+            </ul>
+            <div class="sideBottom position-absolute">
+                <i class="fa-brands fa-facebook text-white"></i>
+                <i class="fa-brands fa-twitter text-white"></i>
+                <i class="fa-solid fa-globe text-white"></i>
+                <p class="text-white">Copyright Â© 2019 All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+        <div class="bg-white w-20 position-relative">
+            <div class="mx-auto w-75 mt-4 "><img class="w-100" src="./images/logo.png" alt=""></div>
+            <div class="toggle">
+                <i id="sideIcon" class="fa-solid sideIcon fa-xmark fa-2x position-absolute d-none"></i>
+                <i id="sideIconbars" class="fa-solid sideIconbars fa-bars fa-2x position-absolute "></i>
+            </div>
+            <div class="sideIconLinks position-absolute">
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ./sidebar -->
+
+    <div class="home position-relative">
+        <div class="container">
+            <div id="foodData" class="row g-3">
+                <!-- <div class="col-md-3">
+                    <div class="bg-danger foodDiv rounded position-relative">
+                        <img class="w-100" src="./images/logo.png" alt="">
+                        <div class="overlay">
+                            <h2>food name</h2>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- ./homesection -->
+
+
+
+            <!-- category -->
+            <div class="categoryOverlay d-none pt-5 ">
+                <div class="category">
+                    <div class="container">
+                        <div id="foodCategory" class="row g-3">
+                            <!-- <div class="col-md-3">
+                        <div class="bg-danger foodDiv rounded position-relative">
+                            <img class="w-100" src="./images/logo.png" alt="">
+                            <div class="overlay">
+                                <h2>food name</h2>
+                            </div>
+                        </div>
+                    </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./category -->
+
+
+            <!-- details -->
+            <div class="details position-absolute pt-5 d-none">
+                <div class="container">
+                    <div class="row"  id="details">
+                        <!-- <div class="col-md-4">
+                            <img class="w-100 rounded" src="./images/logo.png" alt="">
+                            <h2 class="text-white">corba</h2>
+                        </div>
+                        <div class="col-md-7">
+                            <h2 class="text-white">instructions</h2>
+                            <p class="text-white">Pick through your lentils for any foreign debris, rinse them 2 or 3 times, drain, and set
+                                aside. Fair warning, this will probably turn your lentils into a solid block that you’ll
+                                have to break up later In a large pot over medium-high heat, sauté the olive oil and the
+                                onion with a pinch of salt for about 3 minutes, then add the carrots and cook for
+                                another 3 minutes. Add the tomato paste and stir it around for around 1 minute. Now add
+                                the cumin, paprika, mint, thyme, black pepper, and red pepper as quickly as you can and
+                                stir for 10 seconds to bloom the spices. Congratulate yourself on how amazing your house
+                                now smells. Immediately add the lentils, water, broth, and salt. Bring the soup to a
+                                (gentle) boil. After it has come to a boil, reduce heat to medium-low, cover the pot
+                                halfway, and cook for 15-20 minutes or until the lentils have fallen apart and the
+                                carrots are completely cooked. After the soup has cooked and the lentils are tender,
+                                blend the soup either in a blender or simply use a hand blender to reach the consistency
+                                you desire. Taste for seasoning and add more salt if necessary. Serve with crushed-up
+                                crackers, torn up bread, or something else to add some extra thickness. You could also
+                                use a traditional thickener (like cornstarch or flour), but I prefer to add crackers for
+                                some texture and saltiness. Makes great leftovers, stays good in the fridge for about a
+                                week.</p>
+                                <h2 class="text-white">Area: </h2>
+                                <h2 class="text-white">Category: </h2>
+                                <h2 class="text-white">Recipes: </h2>
+                                <ul class="list-unstyled">
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient1}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient2}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient3}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient4}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient5}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient6}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient7}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient8}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient9}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient10}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient11}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient12}</li>
+                                        <li class="text-bg-info d-inline mx-3">${e.strIngredient13}</li>
+                                        <li class="text-bg-info d-inline mx-3">${e.strIngredient14}</li>
+                                     <li class="text-bg-info d-inline mx-3">${e.strIngredient15}</li>
+                                </ul>
+
+                                <h2 class="text-white">Tags: </h2>
+                               <a href=""><button class="btn btn-outline-success">Source</button></a>
+                                <a href=""><button class="btn btn-outline-danger">Youtube</button></a>
+                            </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- ./details -->
+
+            <!-- details Specific -->
+            <div class="specific d-none">
+                <div class="container">
+                    <div class="row g-3" id="specific">
+                        <!-- <div class="col-md-3">
+                            <div class="bg-danger specificMeals rounded position-relative">
+                                <img class="w-100" src="${e.strMealThumb}" alt="">
+                                <div class="overlaySpecific">
+                                    <h2>${e.strMeal}</h2>
+                                </div>
+                                <div mealId="${e.idMeal}" class="mealId"></div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- ./details Specific -->
+
+
+            <!-- area -->
+            <div class="area pt-5 d-none">
+                <div class="container">
+                    <div class="row g-3" id="getAreas">
+                        <!-- <div class="col-md-3">
+                            <i class="fa-solid fa-house-laptop fa-6x text-white"></i>
+                            <h2 class="text-white">fasdas</h2>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- ./area -->
+
+            <!-- areaMeals -->
+            <div class="areameals pt-5 d-none">
+                <div class="container">
+                    <div id="areamealsData" class="row g-3">
+                        <!-- <div class="col-md-3">
+                            <div class="foodDiv rounded position-relative">
+                                <img class="w-100" src="${e.strMealThumb}" alt="">
+                                <div class="overlay">
+                                    <h2>${e.strMeal}</h2>
+                                </div>
+                                <div mealId="${e.idMeal}" class="mealId"></div>
+                            </div>
+                        </div> -->
+                    </div>
+            <!-- ./areaMeals -->
+            
+            
+        </div>
+             </div>
+    
+             <!-- ingredients -->
+             <div class="ingredients pt-5 d-none">
+                <div class="container">
+                    <div class="row g-3" id="getIngredients">
+                        <!-- <div class="col-md-3 text-center">
+                            <i class="fa-solid fa-solid fa-drumstick-bite top fa-4x text-white"></i>
+                            <h2 class="text-white">fasdas</h2>
+                            <p class="text-white">salfahfasfasfasfasfdsasasasasasasaghhjskfh</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- ./ingredients -->
+
+            
+            <!-- ingrdientmeal -->
+            <div class="ingredientsmeals pt-5 d-none">
+                <div class="container">
+                    <div id="ingredientmealdata" class="row g-3">
+                        <!-- <div class="col-md-3">
+                            <div class="foodDiv rounded position-relative">
+                                <img class="w-100" src="${e.strMealThumb}" alt="">
+                                <div class="overlay">
+                                    <h2>${e.strMeal}</h2>
+                                </div>
+                                <div mealId="${e.idMeal}" class="mealId"></div>
+                            </div>
+                        </div> -->
+                    </div>
+            <!-- ./ingrdientmeal -->
+
+
+
+
+
+
+
+</div>
+    </div>
+
+
+
+
+    <div class="contact pt-5 d-none">
+        <div class="container">
+            <div class="contactRow row justify-content-center align-items-center">
+                <div class="col-md-6 my-3">
+                    <input id="name" class="w-100 rounded py-2" placeholder="Enter Your Name" type="text">
+                    <div id="alertname" class="alert alert-danger d-none w-100 rounded">
+                        Special characters and numbers not allowed
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <input id="email" class="w-100 rounded py-2  " placeholder="Enter Your Email" type="email">
+                    <div id="alertemail" class="alert alert-danger d-none w-100 rounded ">
+                        Email not valid *exemple@yyy.zzz
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <input id="phone" class="w-100 rounded py-2" placeholder="Enter Your Phone" type="text">
+                    <div id="alertphone" class="alert alert-danger d-none w-100 rounded">
+                        Enter valid Phone Number
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <input id="age" class="w-100 rounded py-2 " placeholder="Enter Your Age" type="number">
+                    <div id="alertage" class="alert alert-danger d-none w-100 rounded">
+                        Enter valid age
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <input id="password" class="w-100 rounded py-2" placeholder="Enter Your Password" type="password">
+                    <div id="alertpassword" class="alert alert-danger d-none w-100 rounded">
+                        Enter valid password *Minimum eight characters, at least one letter and one number:*
+                    </div>
+                </div>
+                <div class="col-md-6 my-3">
+                    <input id="repassword" class="w-100 rounded py-2  " placeholder="Repassword" type="password">
+                    <div id="alertrepassword" class="alert alert-danger d-none w-100 rounded">
+                        Enter valid repassword
+                    </div>
+                </div>
+                <div class="col-md-12 my-3 d-flex justify-content-center position-relative">
+                    <button class="disabled btn btn-outline-danger">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="search d-none pt-5">
+    <div class="container">
+        <div class="mx-auto">
+            <input id="searchName" class="rounded" type="text" placeholder="Search by name">
+            <input id="searchLetter" class="rounded" type="text" placeholder="Search by first letter">
+        </div>
+        <div class="row" id="searchData">
+            <!-- <div class="col-md-3">
+                <div class="foodDiv rounded position-relative">
+                    <img class="w-100" src="${e.strMealThumb}" alt="">
+                    <div class="overlay">
+                        <h2>${e.strMeal}</h2>
+                    </div>
+                    <div mealId="${e.idMeal}" class="mealId"></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

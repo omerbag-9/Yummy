@@ -1,0 +1,112 @@
+.w-20{
+    width: 20%;
+}
+
+.w-80{
+    width: 80%;
+}
+
+.sidebar{
+    width: 17%;
+
+}
+.sideIcon{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.sideIconbars{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.sideIconLinks{
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+}
+
+.sidebar ul{
+    list-style: none;
+    margin: 25px;
+    padding: 0;
+}
+
+
+.sidebar ul li{
+    margin: 15px 0px;
+}
+
+.sidebar ul a{
+    color: white;
+    text-decoration: none;
+}
+
+.sideBottom{
+    bottom: 0;
+    margin: 25px;
+}
+
+.overlay,.overlaySpecific{
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.367);
+    transition: top 0.8s;
+}
+
+.category-meal-name,.mealId,.AreaName,.areaMealId,.ingredientName,.ingredientMeal,.searchName,.searchLetter{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.overlay h2,
+.overlaySpecific h2{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.foodDiv:hover .overlay,
+.specificMeals:hover .overlaySpecific{
+    top: 0;
+}
+
+.foodDiv,.specificMeals,.AreaName,.ingredientName{
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.categoryOverlay , .details,.specific,.area,.areameals,.ingredients,.ingredientsmeals,.contact,.search{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.ingredients p {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+}
+
+.search input{
+    width: 45%;
+    padding: 8px;
+    background: transparent;
+}
+.search input:focus{
+    color: white;
+}
