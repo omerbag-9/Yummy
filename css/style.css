@@ -110,3 +110,7 @@
 .search input:focus{
     color: white;
 }
+
+.loading{
+    display: flex;
+}

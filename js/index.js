@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    $(".loading").fadeOut(2000)
+})
+
 //sidebar toggle
 let sideBarWidth = $("#sideBarLeft").outerWidth()
 $(".sidebar").css({left: `${-sideBarWidth}px`})
